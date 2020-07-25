@@ -17,6 +17,23 @@
 		AE66601424CC3D4C00F4B32E /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66601324CC3D4C00F4B32E /* ContactsListViewController.swift */; };
 		AE66601C24CC3EB700F4B32E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66601A24CC3EB700F4B32E /* ContactTableViewCell.swift */; };
 		AE66601D24CC3EB700F4B32E /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE66601B24CC3EB700F4B32E /* ContactTableViewCell.xib */; };
+		AE66601F24CC415900F4B32E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66601E24CC415900F4B32E /* Model.swift */; };
+		AE66602224CC416A00F4B32E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602024CC416A00F4B32E /* DataManager.swift */; };
+		AE66602324CC416A00F4B32E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602124CC416A00F4B32E /* ServiceManager.swift */; };
+		AE66603424CC41F900F4B32E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602524CC41F800F4B32E /* Constants.swift */; };
+		AE66603524CC41F900F4B32E /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602624CC41F800F4B32E /* Bounds.swift */; };
+		AE66603624CC41F900F4B32E /* Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602724CC41F800F4B32E /* Apis.swift */; };
+		AE66603724CC41F900F4B32E /* ToastMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602824CC41F800F4B32E /* ToastMessages.swift */; };
+		AE66603824CC41F900F4B32E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602924CC41F800F4B32E /* Fonts.swift */; };
+		AE66603924CC41F900F4B32E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602A24CC41F800F4B32E /* Globals.swift */; };
+		AE66603A24CC41F900F4B32E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602B24CC41F800F4B32E /* Colors.swift */; };
+		AE66603B24CC41F900F4B32E /* AllExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602D24CC41F800F4B32E /* AllExtensions.swift */; };
+		AE66603C24CC41F900F4B32E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602E24CC41F800F4B32E /* Reachability.swift */; };
+		AE66603D24CC41F900F4B32E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66602F24CC41F800F4B32E /* Box.swift */; };
+		AE66603E24CC41F900F4B32E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66603024CC41F800F4B32E /* Utils.swift */; };
+		AE66603F24CC41F900F4B32E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66603224CC41F900F4B32E /* ToastView.swift */; };
+		AE66604024CC41F900F4B32E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66603324CC41F900F4B32E /* LoadingView.swift */; };
+		AE66604224CC422A00F4B32E /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66604124CC422A00F4B32E /* ContactsViewModel.swift */; };
 		DD9F2B94884084A5AAA173CA /* Pods_ContactsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0A7738785F4B05413E4FE9 /* Pods_ContactsList.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +52,23 @@
 		AE66601324CC3D4C00F4B32E /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
 		AE66601A24CC3EB700F4B32E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		AE66601B24CC3EB700F4B32E /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		AE66601E24CC415900F4B32E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AE66602024CC416A00F4B32E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AE66602124CC416A00F4B32E /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		AE66602524CC41F800F4B32E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AE66602624CC41F800F4B32E /* Bounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		AE66602724CC41F800F4B32E /* Apis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
+		AE66602824CC41F800F4B32E /* ToastMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessages.swift; sourceTree = "<group>"; };
+		AE66602924CC41F800F4B32E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AE66602A24CC41F800F4B32E /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		AE66602B24CC41F800F4B32E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AE66602D24CC41F800F4B32E /* AllExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExtensions.swift; sourceTree = "<group>"; };
+		AE66602E24CC41F800F4B32E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AE66602F24CC41F800F4B32E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		AE66603024CC41F800F4B32E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AE66603224CC41F900F4B32E /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		AE66603324CC41F900F4B32E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AE66604124CC422A00F4B32E /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		DA3A74077CE2BAC32B04BBA3 /* Pods-ContactsList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsList.release.xcconfig"; path = "Target Support Files/Pods-ContactsList/Pods-ContactsList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +133,9 @@
 		AE66600B24CC3C7F00F4B32E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				AE66603124CC41F900F4B32E /* CommonViews */,
+				AE66602424CC41F800F4B32E /* Constants */,
+				AE66602C24CC41F800F4B32E /* Helpers */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -106,6 +143,8 @@
 		AE66600C24CC3C8500F4B32E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AE66602024CC416A00F4B32E /* DataManager.swift */,
+				AE66602124CC416A00F4B32E /* ServiceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -122,6 +161,7 @@
 		AE66600E24CC3C8A00F4B32E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AE66604124CC422A00F4B32E /* ContactsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,8 +178,43 @@
 		AE66601524CC3D8D00F4B32E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE66601E24CC415900F4B32E /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AE66602424CC41F800F4B32E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AE66602524CC41F800F4B32E /* Constants.swift */,
+				AE66602624CC41F800F4B32E /* Bounds.swift */,
+				AE66602724CC41F800F4B32E /* Apis.swift */,
+				AE66602824CC41F800F4B32E /* ToastMessages.swift */,
+				AE66602924CC41F800F4B32E /* Fonts.swift */,
+				AE66602A24CC41F800F4B32E /* Globals.swift */,
+				AE66602B24CC41F800F4B32E /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AE66602C24CC41F800F4B32E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE66602D24CC41F800F4B32E /* AllExtensions.swift */,
+				AE66602E24CC41F800F4B32E /* Reachability.swift */,
+				AE66602F24CC41F800F4B32E /* Box.swift */,
+				AE66603024CC41F800F4B32E /* Utils.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AE66603124CC41F900F4B32E /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				AE66603224CC41F900F4B32E /* ToastView.swift */,
+				AE66603324CC41F900F4B32E /* LoadingView.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		C474993C4EB0FE823B65FC83 /* Pods */ = {
@@ -267,11 +342,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE66603824CC41F900F4B32E /* Fonts.swift in Sources */,
+				AE66603F24CC41F900F4B32E /* ToastView.swift in Sources */,
+				AE66601F24CC415900F4B32E /* Model.swift in Sources */,
+				AE66604024CC41F900F4B32E /* LoadingView.swift in Sources */,
+				AE66603D24CC41F900F4B32E /* Box.swift in Sources */,
+				AE66603724CC41F900F4B32E /* ToastMessages.swift in Sources */,
+				AE66602224CC416A00F4B32E /* DataManager.swift in Sources */,
 				AE66601C24CC3EB700F4B32E /* ContactTableViewCell.swift in Sources */,
 				AE665FFF24CC36BC00F4B32E /* ContactsList.xcdatamodeld in Sources */,
 				AE66601224CC3D2B00F4B32E /* NavigationController.swift in Sources */,
+				AE66603424CC41F900F4B32E /* Constants.swift in Sources */,
+				AE66603924CC41F900F4B32E /* Globals.swift in Sources */,
+				AE66603A24CC41F900F4B32E /* Colors.swift in Sources */,
+				AE66603624CC41F900F4B32E /* Apis.swift in Sources */,
+				AE66603B24CC41F900F4B32E /* AllExtensions.swift in Sources */,
+				AE66602324CC416A00F4B32E /* ServiceManager.swift in Sources */,
 				AE665FF524CC36BC00F4B32E /* AppDelegate.swift in Sources */,
+				AE66604224CC422A00F4B32E /* ContactsViewModel.swift in Sources */,
+				AE66603E24CC41F900F4B32E /* Utils.swift in Sources */,
+				AE66603C24CC41F900F4B32E /* Reachability.swift in Sources */,
 				AE665FF724CC36BC00F4B32E /* SceneDelegate.swift in Sources */,
+				AE66603524CC41F900F4B32E /* Bounds.swift in Sources */,
 				AE66601424CC3D4C00F4B32E /* ContactsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
