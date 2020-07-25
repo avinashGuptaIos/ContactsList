@@ -51,7 +51,7 @@ private extension ContactListViewModel {
         ServiceManagerSharedInstance.methodType(requestType: GET_REQUEST, url: "?limit=10", params: nil, paramsData: nil, completion: { [weak self] (_ response,_ responseData, _ statusCode) in
             if let responsex = response, statusCode == 200{
                 let contactsArray = JSON(responsex).array
-//                let contactList = try? JSONDecoder().decode([ContactObject].self, from: contactListData)
+                //                let contactList = try? JSONDecoder().decode([ContactObject].self, from: contactListData)
                 
                 self?.saveContactListToDb(contactList: contactsArray ?? [], callback: callback)
             }

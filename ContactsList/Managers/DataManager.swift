@@ -15,9 +15,9 @@ let DataManagerSharedInstance = DataManager.shared
 class DataManager {
     private init(){ }
     static let shared = DataManager()
-
+    
     private let dataBaseQueue = DispatchQueue(label: "dataBaseQueue", attributes: .concurrent)
-
+    
     //MARK: ContactList CRUD Operations
     func saveContactListToDb(contactList: [JSON], callback: @escaping DataExists) {
         dataBaseQueue.async { [weak self] in
@@ -35,7 +35,7 @@ class DataManager {
             callback(contactList.count > 0)
         }
     }
-
+    
     func loadSavedContactList(callback:@escaping (_ contactList: [CDContact]?) -> Void){
         dataBaseQueue.async(flags: .barrier) {
             let fetchRequest =  NSFetchRequest<CDContact>(entityName: "CDContact")
@@ -43,9 +43,9 @@ class DataManager {
             callback(contacts)
         }
     }
-
+    
     //MARK: Delete Any Entity using Batch Request
-
+    
     func deleteAllObjects(entityName: String) {
         dataBaseQueue.sync {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
@@ -58,5 +58,5 @@ class DataManager {
             }
         }
     }
-
+    
 }

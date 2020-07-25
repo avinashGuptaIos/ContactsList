@@ -9,12 +9,12 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
     }
-
+    
 }
 
 extension NavigationController: UINavigationControllerDelegate{

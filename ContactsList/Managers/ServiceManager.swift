@@ -17,7 +17,7 @@ public let ServiceManagerSharedInstance = ServiceManager.shared
 open class ServiceManager: NSObject {
     
     private override init() {}
-      static let shared = ServiceManager()
+    static let shared = ServiceManager()
     
     var isInternetAvailable: Bool {
         if currentReachabilityStatus == .notReachable {
@@ -54,7 +54,7 @@ open class ServiceManager: NSObject {
     }
     
     //MARK:- SessionRequest
-     func sessionWithRequest(urlRequest: URLRequest, completion: completionBlock?, failure: failureBlock?)
+    func sessionWithRequest(urlRequest: URLRequest, completion: completionBlock?, failure: failureBlock?)
     {
         if ServiceManager.shared.isInternetAvailable == true {
             let sessionConfiguration =  URLSessionConfiguration.default
@@ -65,7 +65,7 @@ open class ServiceManager: NSObject {
                 let httpResponse = response as? HTTPURLResponse
                 
                 let code = httpResponse?.statusCode
-              
+                
                 if error == nil && data != nil {
                     let json = try? JSONSerialization.jsonObject(with: data!, options: .init(rawValue: 0))
                     if  json != nil {
@@ -77,7 +77,7 @@ open class ServiceManager: NSObject {
                                 let responseCode = !(json is NSNumber) ? (jsonResponse["success"] as? Int):0
                                 if (responseCode != nil)
                                 {
-                                     if responseCode == 9000
+                                    if responseCode == 9000
                                     {
                                         STOP_LOADING_VIEW()
                                         if failure != nil {

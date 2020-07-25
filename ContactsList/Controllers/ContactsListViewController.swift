@@ -9,13 +9,13 @@
 import UIKit
 
 class ContactsListViewController: UIViewController {
-
-    @IBOutlet weak var tableViewx: UITableView!
-
     
-       private var contactListViewModel = ContactListViewModel()
-       
-       private var contacts = [CDContact]()
+    @IBOutlet weak var tableViewx: UITableView!
+    
+    
+    private var contactListViewModel = ContactListViewModel()
+    
+    private var contacts = [CDContact]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +35,31 @@ class ContactsListViewController: UIViewController {
     }
     
     
-     fileprivate func setupTableView() {
-         tableViewx.register(UINib(nibName: ContactTableViewCell.reuseIdentifier(), bundle: nil), forCellReuseIdentifier: ContactTableViewCell.reuseIdentifier())
-         tableViewx.dataSource = self
-         tableViewx.delegate = self
-         tableViewx.rowHeight = UITableView.automaticDimension
-         tableViewx.estimatedRowHeight = 50
-         tableViewx.tableFooterView = UIView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addObserverForInternetConnectivity()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObserverForInternetConnectivity()
+    }
+    
+    fileprivate func setupTableView() {
+        tableViewx.register(UINib(nibName: ContactTableViewCell.reuseIdentifier(), bundle: nil), forCellReuseIdentifier: ContactTableViewCell.reuseIdentifier())
+        tableViewx.dataSource = self
+        tableViewx.delegate = self
+        tableViewx.rowHeight = UITableView.automaticDimension
+        tableViewx.estimatedRowHeight = 50
+        tableViewx.tableFooterView = UIView()
+    }
+    
+    // MARK: - InternetConnection_Observer
+     override func gotInternetConnectivity() {
+         super.gotInternetConnectivity()
+         contactListViewModel.getContactList()
      }
-
 }
 
 
@@ -51,11 +67,11 @@ class ContactsListViewController: UIViewController {
 
 extension ContactsListViewController: UITableViewDataSource, UITableViewDelegate{
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.reuseIdentifier(), for: indexPath) as! ContactTableViewCell
         cell.setUpCell(contact: contacts[indexPath.row])
         return cell
