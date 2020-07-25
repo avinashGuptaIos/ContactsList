@@ -61,11 +61,11 @@ extension ContactsListViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let roomId = roomDataArray[indexPath.row].room?.id , let lockDetailsVc = storyboard?.instantiateViewController(identifier: "LockDetailsViewController") as? LockDetailsViewController
-//        {
-//            lockDetailsVc.roomId = roomId
-//            navigationController?.pushViewController(lockDetailsVc, animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let contactDetailsVc = storyboard?.instantiateViewController(identifier: "ContactDetailsViewController") as? ContactDetailsViewController
+        {
+            contactDetailsVc.contact = contacts[indexPath.row]
+            navigationController?.pushViewController(contactDetailsVc, animated: true)
+        }
+    }
 }

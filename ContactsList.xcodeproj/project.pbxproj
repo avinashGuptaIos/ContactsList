@@ -34,6 +34,9 @@
 		AE66603F24CC41F900F4B32E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66603224CC41F900F4B32E /* ToastView.swift */; };
 		AE66604024CC41F900F4B32E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66603324CC41F900F4B32E /* LoadingView.swift */; };
 		AE66604224CC422A00F4B32E /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66604124CC422A00F4B32E /* ContactsViewModel.swift */; };
+		AE66604524CC54F600F4B32E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66604424CC54F600F4B32E /* ContactDetailsViewController.swift */; };
+		AE66604824CC564000F4B32E /* ContactDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66604624CC564000F4B32E /* ContactDetailsTableViewCell.swift */; };
+		AE66604924CC564000F4B32E /* ContactDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE66604724CC564000F4B32E /* ContactDetailsTableViewCell.xib */; };
 		DD9F2B94884084A5AAA173CA /* Pods_ContactsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0A7738785F4B05413E4FE9 /* Pods_ContactsList.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		AE66603224CC41F900F4B32E /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		AE66603324CC41F900F4B32E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AE66604124CC422A00F4B32E /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		AE66604424CC54F600F4B32E /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		AE66604624CC564000F4B32E /* ContactDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		AE66604724CC564000F4B32E /* ContactDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		DA3A74077CE2BAC32B04BBA3 /* Pods-ContactsList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsList.release.xcconfig"; path = "Target Support Files/Pods-ContactsList/Pods-ContactsList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,7 @@
 			children = (
 				AE66601124CC3D2B00F4B32E /* NavigationController.swift */,
 				AE66601324CC3D4C00F4B32E /* ContactsListViewController.swift */,
+				AE66604424CC54F600F4B32E /* ContactDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +178,8 @@
 			children = (
 				AE66601A24CC3EB700F4B32E /* ContactTableViewCell.swift */,
 				AE66601B24CC3EB700F4B32E /* ContactTableViewCell.xib */,
+				AE66604624CC564000F4B32E /* ContactDetailsTableViewCell.swift */,
+				AE66604724CC564000F4B32E /* ContactDetailsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +297,7 @@
 			files = (
 				AE66601D24CC3EB700F4B32E /* ContactTableViewCell.xib in Resources */,
 				AE66600424CC36BE00F4B32E /* LaunchScreen.storyboard in Resources */,
+				AE66604924CC564000F4B32E /* ContactDetailsTableViewCell.xib in Resources */,
 				AE66600124CC36BE00F4B32E /* Assets.xcassets in Resources */,
 				AE665FFC24CC36BC00F4B32E /* Main.storyboard in Resources */,
 			);
@@ -352,10 +362,12 @@
 				AE66601C24CC3EB700F4B32E /* ContactTableViewCell.swift in Sources */,
 				AE665FFF24CC36BC00F4B32E /* ContactsList.xcdatamodeld in Sources */,
 				AE66601224CC3D2B00F4B32E /* NavigationController.swift in Sources */,
+				AE66604824CC564000F4B32E /* ContactDetailsTableViewCell.swift in Sources */,
 				AE66603424CC41F900F4B32E /* Constants.swift in Sources */,
 				AE66603924CC41F900F4B32E /* Globals.swift in Sources */,
 				AE66603A24CC41F900F4B32E /* Colors.swift in Sources */,
 				AE66603624CC41F900F4B32E /* Apis.swift in Sources */,
+				AE66604524CC54F600F4B32E /* ContactDetailsViewController.swift in Sources */,
 				AE66603B24CC41F900F4B32E /* AllExtensions.swift in Sources */,
 				AE66602324CC416A00F4B32E /* ServiceManager.swift in Sources */,
 				AE665FF524CC36BC00F4B32E /* AppDelegate.swift in Sources */,

@@ -36,7 +36,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="132.58928571428572"/>
+            <point key="canvasLocation" x="967" y="133"/>
+        </scene>
+        <!--Contact Details View Controller-->
+        <scene sceneID="CWN-Ez-5so">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DQL-5w-f4w" customClass="ContactDetailsViewController" customModule="ContactsList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3p-UY-nd0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-zo-6Uy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lqi-zo-6Uy" secondAttribute="trailing" id="4yw-cY-fYj"/>
+                            <constraint firstItem="lqi-zo-6Uy" firstAttribute="top" secondItem="w3p-UY-nd0" secondAttribute="top" id="CAN-lH-Nw8"/>
+                            <constraint firstItem="lqi-zo-6Uy" firstAttribute="leading" secondItem="vJM-LU-bbJ" secondAttribute="leading" id="rv6-I5-4JE"/>
+                            <constraint firstItem="vJM-LU-bbJ" firstAttribute="bottom" secondItem="lqi-zo-6Uy" secondAttribute="bottom" id="xS4-ps-qxG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vJM-LU-bbJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewx" destination="lqi-zo-6Uy" id="8zd-As-QeU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wU-CD-0oT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KXF-2E-8Pr">
