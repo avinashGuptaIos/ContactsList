@@ -52,8 +52,10 @@ private extension ContactListViewModel {
             if let responsex = response, statusCode == 200{
                 let contactsArray = JSON(responsex).array
                 //                let contactList = try? JSONDecoder().decode([ContactObject].self, from: contactListData)
-                
                 self?.saveContactListToDb(contactList: contactsArray ?? [], callback: callback)
+            }else{
+                STOP_LOADING_VIEW()
+                SHOW_TOAST("Something went wrong with status code \(statusCode)")
             }
         }) {  (_ failure, _ statusCode) in
             print("Error happened \(failure.debugDescription)")
