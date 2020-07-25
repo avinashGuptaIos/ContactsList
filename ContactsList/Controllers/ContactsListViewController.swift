@@ -27,6 +27,7 @@ class ContactsListViewController: UIViewController {
         contactListViewModel.contacts.bind { [weak self] (contacts) in
             DispatchQueue.main.async {
                 self?.contacts.removeAll()
+                self?.contacts.append(contentsOf: contacts)
                 self?.tableViewx.reloadData()
             }
         }

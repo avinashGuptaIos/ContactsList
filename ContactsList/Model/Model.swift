@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct ContactObject: Decodable {
-    var name, email, position, photo: String?
-    
-    enum CodingKeys: String, CodingKey{
-        case name = "name"
-        case email = "email"
-        case position = "position"
-        case photo = "photo"
-    }
-}
+//struct ContactObject: Decodable {
+//    var name, email, position, photo: String?
+//    
+//    enum CodingKeys: String, CodingKey{
+//        case name = "name"
+//        case email = "email"
+//        case position = "position"
+//        case photo = "photo"
+//    }
+//}

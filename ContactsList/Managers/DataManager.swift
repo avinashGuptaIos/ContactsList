@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import SwiftyJSON
 
 let DataManagerSharedInstance = DataManager.shared
 
@@ -18,17 +19,17 @@ class DataManager {
     private let dataBaseQueue = DispatchQueue(label: "dataBaseQueue", attributes: .concurrent)
 
     //MARK: ContactList CRUD Operations
-    func saveContactListToDb(contactList: [ContactObject], callback: @escaping DataExists) {
+    func saveContactListToDb(contactList: [JSON], callback: @escaping DataExists) {
         dataBaseQueue.async { [weak self] in
             if contactList.count > 0{
                 self?.deleteAllObjects(entityName: "CDContact")
             }
             for contact in contactList{
                 let contactx = CDContact(context: AppDelegate_ViewContext)
-                contactx.name = contact.name
-                contactx.email = contact.email
-                contactx.position = contact.position
-                contactx.photo = contact.photo
+                contactx.name = contact["name"].string
+                contactx.email = contact["email"].string
+                contactx.position = contact["position"].string
+                contactx.photo = contact["photo"].string
             }
             AppDelegate.shared().saveContext()
             callback(contactList.count > 0)

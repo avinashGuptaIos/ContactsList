@@ -9,7 +9,7 @@
 
 import Foundation
 import CoreData
-
+import SwiftyJSON
 
 class ContactListViewModel {
     
@@ -48,10 +48,12 @@ class ContactListViewModel {
 private extension ContactListViewModel {
     func fetchContactListFromServer(callback: @escaping DataExists) {
         
-        ServiceManagerSharedInstance.methodType(requestType: GET_REQUEST, url: "", params: nil, paramsData: nil, completion: { [weak self] (_ response,_ responseData, _ statusCode) in
-            if let contactListData = responseData, statusCode == 200{
-                let contactList = try? JSONDecoder().decode([ContactObject].self, from: contactListData)
-                self?.saveContactListToDb(contactList: contactList ?? [], callback: callback)
+        ServiceManagerSharedInstance.methodType(requestType: GET_REQUEST, url: "?limit=10", params: nil, paramsData: nil, completion: { [weak self] (_ response,_ responseData, _ statusCode) in
+            if let responsex = response, statusCode == 200{
+                let contactsArray = JSON(responsex).array
+//                let contactList = try? JSONDecoder().decode([ContactObject].self, from: contactListData)
+                
+                self?.saveContactListToDb(contactList: contactsArray ?? [], callback: callback)
             }
         }) {  (_ failure, _ statusCode) in
             print("Error happened \(failure.debugDescription)")
@@ -59,7 +61,7 @@ private extension ContactListViewModel {
         }
     }
     
-    func saveContactListToDb(contactList: [ContactObject], callback: @escaping DataExists) {
+    func saveContactListToDb(contactList: [JSON], callback: @escaping DataExists) {
         DataManagerSharedInstance.saveContactListToDb(contactList: contactList, callback: callback)
     }
     
