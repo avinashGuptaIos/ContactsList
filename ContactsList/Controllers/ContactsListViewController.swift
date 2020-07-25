@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ContactsListViewController.swift
 //  ContactsList
 //
 //  Created by hasher on 25/07/20.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ContactsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
 
 }
-
